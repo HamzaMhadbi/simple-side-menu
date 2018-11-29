@@ -1,7 +1,7 @@
 # Simple Side Menu
 
 An simple Side menu component written only in React.js and CSS3.
-**Inmportants**: This component must be used with React Router V4 !!
+**Important**: This component must be used with React Router V4 !!
 
 ## Demo
 
