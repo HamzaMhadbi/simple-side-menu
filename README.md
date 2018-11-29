@@ -160,7 +160,7 @@ export default Menu;
 | Prop                 | Type   | Default        | Description                                                                                                                          |
 | -------------------- | ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | isOpen               | boo    | true           | Scpecify if the side menu must be opened.                                                                                            |
-| items                | array  | **Required**   | Property for the configuration of the component SideMenu. check the [menu.js](https://github.com/HamzaMhadbi/simple-side-menu#usage) |
+| items                | array  | **Required**   | Property for the configuration of the component SideMenu. check the [menu.js](#usage) |
 | header               | elem   | null           | Property for the side menu header. you can use Header component or any JSX element.                                                  |
 | isExpandable         | bool   | false          | This property make posibile usage of the expanded mode. **don't use it with toggle menu fonctionnality**.                            |
 | defaultIconClassName | string | material-icons | Property for default icon className used for menu item and sub menu item, the Allowed values (material-icons, fa).                   |
