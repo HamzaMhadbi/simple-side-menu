@@ -1,0 +1,53 @@
+@mixin google-fonts($font, $type: css) {
+  $font: unquote($font);
+  @import url(https://fonts.googleapis.com/#{$type}?family=#{$font});
+}
+
+@mixin transition($name: all, $deplay: 0.3s, $type: ease-in-out) {
+  -webkit-transition: $name $deplay $type;
+  -moz-transition: $name $deplay $type;
+  -o-transition: $name $deplay $type;
+  -ms-transition: $name $deplay $type;
+  transition: $name $deplay $type;
+}
+
+@mixin unselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin overflow($valX, $valY) {
+  overflow-x: $valX;
+  overflow-y: $valY;
+}
+
+@mixin animation($anim) {
+  -webkit-animation: $anim;
+  animation: $anim;
+}
+
+@mixin scrollable {
+  @include overflow(hidden, visible);
+  &::-webkit-scrollbar {
+    background-color: #262f3d;
+    width: $scroll-bar-width;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #8a9bb2;
+    -webkit-border-radius: 8px;
+    border-radius: $scroll-bar-border-radius;
+    border: $scroll-bar-border;
+  }
+}
+
+@mixin transform($effect) {
+  -ms-transform: $effect;
+  -moz-transform: $effect;
+  -webkit-transform: $effect;
+  transform: $effect;
+}

@@ -1,0 +1,45 @@
+{
+  "name": "simple-side-menu",
+  "version": "1.0.5",
+  "description": "Simple side menu",
+  "private": false,
+  "main": "./dist/index.js",
+  "deprecations": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "example": "npm run start --prefix example",
+    "build-example": "npm run build --prefix example",
+    "start": "webpack --watch",
+    "build": "webpack && npm run build-example",
+    "predeploy": "npm run build-example",
+    "deploy": "gh-pages -d ./example/build"
+  },
+  "author": {
+    "name": "Hamza Mhadbi",
+    "email": "hamza.mhadbi17@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "css-loader": "^1.0.1",
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-router-dom": "^4.3.1"
+  },
+  "homepage": "http://HamzaMhadbi.github.io/simple-side-menu"
+}

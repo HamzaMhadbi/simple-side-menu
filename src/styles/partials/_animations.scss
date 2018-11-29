@@ -1,0 +1,175 @@
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInMenu {
+  0% {
+    width: 0rem;
+  }
+
+  25% {
+    width: getPart($menu-width, 0.25);
+  }
+
+  50% {
+    width: getPart($menu-width, 0.5);
+  }
+
+  75% {
+    width: getPart($menu-width, 0.75);
+  }
+
+  100% {
+    width: $menu-width;
+  }
+}
+
+@keyframes fadeInMenu {
+  0% {
+    width: 0rem;
+  }
+
+  25% {
+    width: getPart($menu-width, 0.25);
+  }
+
+  50% {
+    width: getPart($menu-width, 0.5);
+  }
+
+  75% {
+    width: getPart($menu-width, 0.75);
+  }
+
+  100% {
+    width: $menu-width;
+  }
+}
+
+@-webkit-keyframes fadeOutMenu {
+  0% {
+    width: $menu-width;
+  }
+
+  25% {
+    width: getPart($menu-width, 1-0.25);
+  }
+
+  50% {
+    width: getPart($menu-width, 1-0.5);
+  }
+
+  75% {
+    width: getPart($menu-width, 1-0.75);
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes fadeOutMenu {
+  0% {
+    width: $menu-width;
+  }
+
+  25% {
+    width: getPart($menu-width, 1-0.25);
+  }
+
+  50% {
+    width: getPart($menu-width, 1-0.5);
+  }
+
+  75% {
+    width: getPart($menu-width, 1-0.75);
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes fadeInExpandedMenu {
+  0% {
+    width: 0rem;
+  }
+
+  25% {
+    width: getPart($menu-expanded-width, 0.25);
+  }
+
+  50% {
+    width: getPart($menu-expanded-width, 0.5);
+  }
+
+  75% {
+    width: getPart($menu-expanded-width, 0.75);
+  }
+
+  100% {
+    width: $menu-expanded-width;
+  }
+}
+
+@keyframes fadeInExpandedMenu {
+  0% {
+    width: 0rem;
+  }
+
+  25% {
+    width: getPart($menu-expanded-width, 0.25);
+  }
+
+  50% {
+    width: getPart($menu-expanded-width, 0.5);
+  }
+
+  75% {
+    width: getPart($menu-expanded-width, 0.75);
+  }
+
+  100% {
+    width: $menu-expanded-width;
+  }
+}

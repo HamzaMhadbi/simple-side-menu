@@ -1,0 +1,43 @@
+.main {
+  flex: 1;
+  min-height: 100vh;
+}
+
+.nav-bar {
+  min-height: 4.5rem;
+  font-size: 1.4rem;
+  width: 100%;
+  padding: 0 1rem;
+  background-color: #faf9f9;
+  box-shadow: 0 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.btn-menu {
+  height: 5.5rem;
+  width: 5.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-menu__icon {
+  height: 2rem;
+  width: 2rem;
+  color: #000;
+  margin: 0;
+}
+
+.btn-menu:hover {
+  box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+}
+
+.path {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 2rem;
+}
