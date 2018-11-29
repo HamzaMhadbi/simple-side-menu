@@ -1,13 +1,13 @@
 {
-  "main.css": "/simple-side-menu/static/css/main.8507f703.chunk.css",
-  "main.js": "/simple-side-menu/static/js/main.48091e27.chunk.js",
-  "main.js.map": "/simple-side-menu/static/js/main.48091e27.chunk.js.map",
-  "static/js/1.3a17bb9c.chunk.js": "/simple-side-menu/static/js/1.3a17bb9c.chunk.js",
-  "static/js/1.3a17bb9c.chunk.js.map": "/simple-side-menu/static/js/1.3a17bb9c.chunk.js.map",
+  "main.css": "/simple-side-menu/static/css/main.7d830891.chunk.css",
+  "main.js": "/simple-side-menu/static/js/main.1afa7a43.chunk.js",
+  "main.js.map": "/simple-side-menu/static/js/main.1afa7a43.chunk.js.map",
+  "static/js/1.90bac167.chunk.js": "/simple-side-menu/static/js/1.90bac167.chunk.js",
+  "static/js/1.90bac167.chunk.js.map": "/simple-side-menu/static/js/1.90bac167.chunk.js.map",
   "runtime~main.js": "/simple-side-menu/static/js/runtime~main.ec91630b.js",
   "runtime~main.js.map": "/simple-side-menu/static/js/runtime~main.ec91630b.js.map",
-  "static/css/main.8507f703.chunk.css.map": "/simple-side-menu/static/css/main.8507f703.chunk.css.map",
+  "static/css/main.7d830891.chunk.css.map": "/simple-side-menu/static/css/main.7d830891.chunk.css.map",
   "index.html": "/simple-side-menu/index.html",
-  "precache-manifest.6f2853715b0d891c8660c9da7559f4c4.js": "/simple-side-menu/precache-manifest.6f2853715b0d891c8660c9da7559f4c4.js",
+  "precache-manifest.3594acc45b6ef6c20d3692b9afd0524f.js": "/simple-side-menu/precache-manifest.3594acc45b6ef6c20d3692b9afd0524f.js",
   "service-worker.js": "/simple-side-menu/service-worker.js"
 }
