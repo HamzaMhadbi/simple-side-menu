@@ -3,11 +3,11 @@
 An simple Side menu component written only in React.js and CSS3.
 **Inmportants**: This component must be used with React Router V4 !!
 
-##Demo
+## Demo
 
 [Take a look at the demo](http://HamzaMhadbi.github.io/simple-side-menu)
 
-##Installation
+## Installation
 
 We need to install react router dom firstly if is it not installed
 
@@ -19,7 +19,7 @@ npm install react-router-dom --save
 npm install simple-side-menu --save
 ```
 
-##Usage
+## Usage
 
 **menu.js**
 
@@ -155,18 +155,17 @@ export default Menu;
 
 ## API
 
-`xml <SideMenu />`
+`<SideMenu />`
 
-| Prop                 | Type    | Default           | Description                                                                                                                          |
-| -------------------- | ------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| isOpen               | boo     | true              | Scpecify if the side menu must be opened.                                                                                            |
-| items                | array   | **Required**      | Property for the configuration of the component SideMenu. check the [menu.js](https://github.com/HamzaMhadbi/simple-side-menu#usage) |
-| header               | elem    | null              | Property for the side menu header. you can use Header component or any JSX element.                                                  |
-| isExpandable         | bool    | false             | This property make posibile usage of the expanded mode. **don't use it with toggle menu fonctionnality**.                            |
-| defaultIconClassName | string  | material-icons    | Property for default icon className used for menu item and sub menu item, the Allowed values (material-icons, fa).                   |
-| --------------       | ------- | ----------------- | --------------                                                                                                                       |
+| Prop                 | Type   | Default        | Description                                                                                                                          |
+| -------------------- | ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| isOpen               | boo    | true           | Scpecify if the side menu must be opened.                                                                                            |
+| items                | array  | **Required**   | Property for the configuration of the component SideMenu. check the [menu.js](https://github.com/HamzaMhadbi/simple-side-menu#usage) |
+| header               | elem   | null           | Property for the side menu header. you can use Header component or any JSX element.                                                  |
+| isExpandable         | bool   | false          | This property make posibile usage of the expanded mode. **don't use it with toggle menu fonctionnality**.                            |
+| defaultIconClassName | string | material-icons | Property for default icon className used for menu item and sub menu item, the Allowed values (material-icons, fa).                   |
 
-`xml <Header />`
+`<Header />`
 
 | Prop            | Type   | Default                 | Description                                 |
 | --------------- | ------ | ----------------------- | ------------------------------------------- |
@@ -180,7 +179,7 @@ export default Menu;
 ## Styling
 
 ```CSS
-	.nav-container {
+.nav-container {
   background-color: #db3d44;
 }
 
