@@ -29,6 +29,14 @@ class SideMenu extends PureComponent {
 
   menuRef = null;
 
+  static getDerivedStateFromProps({ isExpandable }, { expanded }) {
+    if (!isExpandable && expanded)
+      return {
+        expanded: false
+      };
+    return null;
+  }
+
   componentDidMount() {
     let currentRoute = {
       index: 0,

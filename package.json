@@ -1,6 +1,6 @@
 {
   "name": "simple-side-menu",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Simple side menu",
   "private": false,
   "main": "./dist/index.js",
@@ -10,9 +10,7 @@
     "example": "npm run start --prefix example",
     "build-example": "npm run build --prefix example",
     "start": "webpack --watch",
-    "build": "webpack && npm run build-example",
-    "predeploy": "npm run build-example",
-    "deploy": "gh-pages -d ./example/build"
+    "build": "webpack"
   },
   "author": {
     "name": "Hamza Mhadbi",
@@ -29,7 +27,6 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "css-loader": "^1.0.1",
-    "gh-pages": "^2.0.1",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
@@ -40,6 +37,5 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-router-dom": "^4.3.1"
-  },
-  "homepage": "http://HamzaMhadbi.github.io/simple-side-menu"
+  }
 }

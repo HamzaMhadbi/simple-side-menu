@@ -1,19 +1,25 @@
 {
-  "name": "example",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-simple-side-menu",
+  "version": "1.0.6",
+  "private": false,
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "simple-side-menu": "^1.0.5"
+    "react-switch": "^3.0.4",
+    "simple-side-menu": "^1.0.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -23,5 +29,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "homepage": "http://HamzaMhadbi.github.io/simple-side-menu"
 }

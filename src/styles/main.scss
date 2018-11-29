@@ -3,7 +3,7 @@
 @import "./partials/mixins";
 @import "./partials/animations";
 
-@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 @include google-fonts("Roboto+Mono");
@@ -59,6 +59,7 @@ body {
   background-color: $side-menu-background-color;
   @include unselect;
   @include animation(fadeInMenu 0.2s ease-in-out);
+  color: $primary-color;
 
   &__separator {
     display: flex;
@@ -79,7 +80,6 @@ body {
   i {
     font-size: $icon-size;
     margin-right: $small-margin;
-    color: #ffff;
   }
 
   &--closed {
@@ -92,12 +92,11 @@ body {
     height: 5rem;
     max-width: $menu-width;
     @extend %flex-center;
-    box-shadow: $box-shadow;
+    @extend %box-shadow;
   }
 
   &__title {
     flex: 1;
-    color: #fff;
     font-family: $title-font-family;
     font-size: 26px;
     line-height: 32px;
@@ -115,7 +114,7 @@ body {
   &__footer {
     min-height: 5rem;
     cursor: pointer;
-    box-shadow: $box-shadow;
+    @extend %box-shadow;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -167,15 +166,14 @@ body {
   height: 100%;
   width: $menu-width;
   font-family: $default-font-family;
-  color: $primary-color;
   @include overflow(hidden, auto);
   @include scrollable;
+  @extend %box-shadow;
 }
 
 .menu-item {
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
-  color: #fff;
+  @extend %box-shadow;
+  color: $primary-color;
 
   & > *:first-child {
     display: flex;
@@ -194,14 +192,9 @@ body {
     font-weight: 500;
   }
 
-  &--selected {
-    background-color: $active-color;
-  }
-
   &__expand-icon {
     @include transition(transform);
     margin-right: 0;
-    color: #fff;
   }
 
   &--collapsible {
@@ -218,10 +211,7 @@ body {
   }
 
   &--active {
-    .menu-item__title,
-    i {
-      color: $active-color;
-    }
+    @extend %active;
   }
 }
 
@@ -229,10 +219,6 @@ body {
   background-color: $sub-menu-background-color;
   display: block;
   @include animation(fadeIn 0.5s);
-
-  i {
-    color: $primary-color;
-  }
 
   &__item {
     padding: $tiny-margin $small-margin;
@@ -245,10 +231,7 @@ body {
     }
 
     &--active {
-      .sub-menu__title,
-      i {
-        color: $active-color;
-      }
+      @extend %active;
     }
   }
 
@@ -267,10 +250,21 @@ body {
   display: none;
 }
 
+%active {
+  background-color: lighten($side-menu-background-color, 5%);
+  cursor: auto;
+}
+
+%box-shadow {
+  box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+}
+
 .display-none {
   @extend %display-none;
 }
 
 .rotate-down {
-  @include transform(rotate(180deg));
+  @include transform(rotate(-180deg));
 }

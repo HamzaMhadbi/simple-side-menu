@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container, Header, SideMenu } from "simple-side-menu";
+import Switch from "react-switch";
 
 import "./style.css";
 
@@ -8,6 +9,10 @@ class App extends PureComponent {
   state = {
     isOpen: true,
     isExpandable: true
+  };
+
+  toggleMenuSelection = isExpandable => {
+    this.setState({ isExpandable });
   };
 
   toggleMenu = () => {
@@ -34,21 +39,46 @@ class App extends PureComponent {
           />
           <div className="main">
             <nav className="nav-bar">
-              <div className="btn-menu" onClick={this.toggleMenu}>
-                <i className="material-icons btn-menu__icon">menu</i>
+              <div className="nav-bar__left">
+                {!isExpandable && (
+                  <div className="btn-menu" onClick={this.toggleMenu}>
+                    <i className="material-icons btn-menu__icon">menu</i>
+                  </div>
+                )}
+                <h1 className="title">Side Menu</h1>
               </div>
+              <label className="nav-bar__right" htmlFor="normal-switch">
+                <span className="label">IS EXPANDABLE</span>
+                <Switch
+                  onChange={this.toggleMenuSelection}
+                  checked={isExpandable}
+                  id="normal-switch"
+                />
+              </label>
             </nav>
-            <Route exact path="/" component={Dashboard} />
-            <Route path="/group/new" component={AddGroup} />
-            <Route path="/group/person/new" component={AddPerson} />
+            <Route exact path="/simple-side-menu/" component={Dashboard} />
+            <Route path="/simple-side-menu/group/new" component={AddGroup} />
             <Route
-              path="/notifications/active"
+              path="/simple-side-menu/group/person/new"
+              component={AddPerson}
+            />
+            <Route
+              path="/simple-side-menu/notifications/active"
               component={NotificationsActive}
             />
-            <Route path="/notifications/off" component={NotificationsOff} />
-            <Route path="/settings/profile" component={Profile} />
-            <Route path="/settings/apps" component={Application} />
-            <Route path="/sign-out" component={LogOut} />
+            <Route
+              path="/simple-side-menu/notifications/off"
+              component={NotificationsOff}
+            />
+            <Route
+              path="/simple-side-menu/settings/profile"
+              component={Profile}
+            />
+            <Route
+              path="/simple-side-menu/settings/apps"
+              component={Application}
+            />
+            <Route path="/simple-side-menu/sign-out" component={LogOut} />
           </div>
         </Container>
       </Router>
@@ -74,7 +104,7 @@ const ITEMS = [
     title: "Dashboard",
     iconClassName: "fa fa-dashboard",
     icon: "",
-    to: "/"
+    to: "/simple-side-menu"
   },
   {
     title: "Group",
@@ -84,12 +114,12 @@ const ITEMS = [
       {
         title: "New group",
         icon: "group_add",
-        to: "/group/new"
+        to: "/simple-side-menu/group/new"
       },
       {
         title: "New person",
         icon: "person_add",
-        to: "/group/person/new"
+        to: "/simple-side-menu/group/person/new"
       }
     ]
   },
@@ -101,12 +131,12 @@ const ITEMS = [
       {
         title: "Active",
         icon: "notifications_active",
-        to: "/notifications/active"
+        to: "/simple-side-menu/notifications/active"
       },
       {
         title: "Off",
         icon: "notifications_off",
-        to: "/notifications/off"
+        to: "/simple-side-menu/notifications/off"
       }
     ]
   },
@@ -118,18 +148,18 @@ const ITEMS = [
       {
         title: "Profile",
         icon: "person",
-        to: "/settings/profile"
+        to: "/simple-side-menu/settings/profile"
       },
       {
         title: "Applications",
         icon: <i className="material-icons">apps</i>,
-        to: "/settings/apps"
+        to: "/simple-side-menu/settings/apps"
       }
     ]
   },
   {
     title: "Sign out",
     icon: <i className="ion-log-out" />,
-    to: "/sign-out"
+    to: "/simple-side-menu/sign-out"
   }
 ];

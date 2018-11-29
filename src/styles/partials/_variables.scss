@@ -1,9 +1,8 @@
 // === COLORS ===
-$primary-color: rgba(255, 255, 255, 0.8);
+$primary-color: #fff;
 $side-menu-background-color: #262f3d;
 $sub-menu-background-color: #19212b;
 $icon-color: $primary-color;
-$active-color: #39b2d5;
 
 // === SIZES ===
 $menu-width: 24.5rem;
@@ -22,7 +21,7 @@ $default-font-family: Roboto, "Helvetica Neue", sans-serif;
 $title-font-family: "Google Sans", sans-serif;
 
 // === BOX SHADOW ===
-$box-shadow: 0 1px 0 #404854 !important;
+$box-shadow: 0 1px 0 #404854;
 
 // ===  BORDER ===
 $scroll-bar-border: 2px solid #262f3d;
