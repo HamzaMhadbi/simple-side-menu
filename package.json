@@ -1,6 +1,6 @@
 {
   "name": "simple-side-menu",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Simple side menu",
   "private": false,
   "main": "./dist/index.js",
