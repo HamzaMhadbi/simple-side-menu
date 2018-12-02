@@ -1,6 +1,6 @@
 {
   "name": "simple-side-menu",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "Simple side menu",
   "private": false,
   "main": "./dist/index.js",
@@ -16,7 +16,6 @@
     "name": "Hamza Mhadbi",
     "email": "hamza.mhadbi17@gmail.com"
   },
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
@@ -37,5 +36,18 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-router-dom": "^4.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HamzaMhadbi/simple-side-menu"
+  },
+  "keywords": [
+    "react",
+    "sidebar",
+    "sidemenu",
+    "sidenav",
+    "navigation",
+    "navigation-drawer",
+    "react-router"
+  ]
 }
