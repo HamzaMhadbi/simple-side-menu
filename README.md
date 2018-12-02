@@ -1,6 +1,6 @@
 # Simple Side Menu
 
-An simple Side menu component written only in React.js and CSS3.
+a simple Side menu component written only in React.js and CSS3.
 
 > **Important**: This component must be used with React Router V4.
 
@@ -163,7 +163,7 @@ export default Menu;
 | isOpen               | bool   | true           | Specify if the side menu must be opened.                                                                           |
 | items                | array  | **Required**   | Property for the configuration of the component SideMenu. check the [menu.js](#usage)                              |
 | header               | elem   | null           | Property for the side menu header. you can use Header component or any JSX element.                                |
-| isExpandable         | bool   | false          | This property make posibile usage of the expanded mode. **don't use it with toggle menu fonctionnality**.          |
+| isExpandable         | bool   | false          | This property make possibile usage of the expanded mode. **don't use it with toggle menu fonctionnality**.         |
 | defaultIconClassName | string | material-icons | Property for default icon className used for menu item and sub menu item, the Allowed values (material-icons, fa). |
 
 `<Header />`
