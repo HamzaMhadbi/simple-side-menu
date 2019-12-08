@@ -1,6 +1,6 @@
 {
   "name": "simple-side-menu",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Simple side menu",
   "private": false,
   "main": "./dist/index.js",
@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-router-dom": "^4.3.1"
+    "react": "^16.12.0",
+    "react-router-dom": "^5.1.2"
   },
   "repository": {
     "type": "git",

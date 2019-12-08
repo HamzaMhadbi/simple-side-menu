@@ -1,6 +1,11 @@
 /node_modules
 /dist
 
+package-lock.json
+yarn.lock
+
+/example
+
 # dependencies
 /example/node_modules
 /example/pnp
@@ -22,3 +27,6 @@
 /example/npm-debug.log*
 /example/yarn-debug.log*
 /example/yarn-error.log*
+
+/example/package-lock.json
+/example/yarn.lock

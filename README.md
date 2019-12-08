@@ -94,20 +94,23 @@ export default [
 **Menu.js**
 
 ```javascript
-import React, { PureComponent } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container, Header, SideMenu } from "simple-side-menu";
 
-import MENU_ITEMS from "./menu";
+import menuItems from "./menu";
 
-class Menu extends PureComponent {
-  state = {
-    isOpen: true
-  };
+class Menu extends React.PureComponent {
+  constructor(props){
+    super(props);
+    this.state = {
+      isOpen: true
+    }
+  }
 
   toggleMenu = () => {
-    this.setState(prevState => ({
-      isOpen: !prevState.isOpen
+    this.setState(({isOpen}) => ({
+      isOpen: !isOpen
     }));
   };
 
@@ -118,7 +121,7 @@ class Menu extends PureComponent {
           <SideMenu
             isOpen={this.state.isOpen}
             header={<Header logo="../public/logo.png" title="MENU_TITLE" />}
-            items={MENU_ITEMS}
+            items={menuItems}
           />
           <div className="main">
             <button onClick={this.toggleMenu}>Toggle Me</button>
