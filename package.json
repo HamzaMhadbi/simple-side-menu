@@ -4,38 +4,49 @@
   "description": "Simple side menu",
   "private": false,
   "main": "./dist/index.js",
-  "deprecations": "",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "example": "npm run start --prefix example",
-    "build-example": "npm run build --prefix example",
-    "start": "webpack --watch",
-    "build": "webpack"
+    "audit:fix": "npm audit fix --force",
+    "prettify": "npx prettier '**/*.{js,ts,tsx,mjs,cjs,json}' --write",
+    "clean:all": "rm -rf node_modules package-lock.json dist && npm cache clean -f",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build:style": "sass src/styles/main.scss:src/index.css --no-source-map --style compressed",
+    "build": "npm i && mkdir -p dist && npm run build:style && cp src/index.css dist/index.css && tsc && rm -rf node_modules",
+    "test": "jest",
+    "test:coverage": "npm run clean && npm run build && npm run test -- --coverage",
+    "prepare": "husky install",
+    "example": "cd example && npm start"
   },
   "author": {
     "name": "Hamza Mhadbi",
     "email": "hamza.mhadbi17@gmail.com"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/preset-env": "^7.1.6",
-    "@babel/preset-react": "^7.0.0",
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^8.0.4",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "css-loader": "^1.0.1",
-    "node-sass": "^4.10.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.26.1",
-    "webpack-cli": "^3.1.2"
+    "@babel/preset-env": "^7.23.7",
+    "@babel/preset-react": "^7.23.3",
+    "@types/jest": "^29.5.11",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-test-renderer": "^18.0.7",
+    "babel-jest": "^29.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.2.5",
+    "react-test-renderer": "^18.2.0",
+    "sass": "^1.70.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
   },
-  "dependencies": {
-    "prop-types": "^15.6.2",
-    "react": "^16.12.0",
-    "react-router-dom": "^5.1.2"
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0"
   },
   "repository": {
     "type": "git",
